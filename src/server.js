@@ -13,6 +13,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/products', productRoutes);
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "UP", message: "User Service is running 🚀" });
+});
 
 // DB connection
 mongoose.connect(process.env.MONGO_URI)
