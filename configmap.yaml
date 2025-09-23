@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: product-service-config
+data:
+  PORT: "6001"
+  SERVICE_NAME: "product-service"
